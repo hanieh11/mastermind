@@ -8,14 +8,10 @@ class Environment:
         self.num_turns = 0
 
     def _check_shot(self, defender=None, coordinate=None):
-        # check if player i has guessed right
-        #returns
         golden_f=0 #for the correct position and color
         silver_f=0 #for the correct color
         check_board=list(self.players[0].info['board'])
-        print(check_board, 'javab')
         guess=list(self.players[0].shoot(4))
-        print(guess, 'hads')
         for i in range(4):
             if check_board[i]==guess[i]:
                 golden_f +=1
